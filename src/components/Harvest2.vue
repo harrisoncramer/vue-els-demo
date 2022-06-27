@@ -6,7 +6,7 @@
       <input v-model="message" name=""/>
       <button>Harvest</button>
     </form>
-    <h2>{{ message ?? "Nobody" }} is ready to harvest...</h2>
+    <h2>{{ message ?? "Nobody" }} just grew...</h2>
     <div style="font-size: 48px;" v-if="crop">
       <FoodWrapper> {{ crop }}</FoodWrapper>
     </div>
@@ -26,9 +26,6 @@ export default {
       required: true,
       default: () => [],
     }
-  },
-  mounted () {
-    alert("Let's grow some crops, broh")
   },
   data () {
     return {
